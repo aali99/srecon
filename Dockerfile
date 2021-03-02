@@ -21,10 +21,10 @@ LABEL org.label-schema.name='reconftw' \
     org.label-schema.docker.cmd.devel='docker run --rm -ti six2dez/reconftw' \
     MAINTAINER="six2dez"
 
-RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
-    echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
+#RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
+#    echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
 
-#ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN set -x \
         && apt-get -yqq update \
