@@ -1,9 +1,9 @@
-FROM kalilinux/kali-rolling
+FROM FROM ubuntu:20.04
 
 # Change this
 ENV COLLAB_SERVER='XXXXXXXXXX'
 # Change this
-ENV XSS_SERVER='XXXXXXXXXXX'
+ENV XSS_SERVER='sam101.xss.ht'
 # Change this
 ENV SHODAN_API_KEY='XXXXXXXXXXXXXX'
 
@@ -24,7 +24,7 @@ LABEL org.label-schema.name='reconftw' \
 RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
     echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
 
-ENV DEBIAN_FRONTEND noninteractive
+#ENV DEBIAN_FRONTEND noninteractive
 
 RUN set -x \
         && apt-get -yqq update \
