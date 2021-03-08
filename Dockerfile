@@ -40,5 +40,9 @@ ADD subfinder_config.yaml /root/.config/subfinder/config.yaml
 ADD amass_config.ini /root/.config/amass/config.ini
 ADD notify.conf /root/.config/notify/notify.conf
 
+RUN apt install -y libpcap-dev
+RUN GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
+
+
 CMD ["bash"]
 WORKDIR /root/Tools/reconftw
