@@ -42,6 +42,7 @@ ADD notify.conf /root/.config/notify/notify.conf
 
 RUN apt install -y libpcap-dev
 RUN GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
+RUN apt-get install -y --no-install-recommends hydra nano
 
 
 CMD ["bash"]
