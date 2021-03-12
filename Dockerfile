@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 # Change this
-ENV COLLAB_SERVER='XXXXXXXXXX'
+ENV COLLAB_SERVER='sam101.requestcatcher.com'
 # Change this
 ENV XSS_SERVER='sam101.xss.ht'
 # Change this
@@ -31,7 +31,7 @@ RUN LATEST_GO=$(wget -qO- https://golang.org/dl/ | grep -oP 'go([0-9\.]+)\.linux
 
 RUN mkdir -p /root/Tools \
     && cd /root/Tools \
-    && git clone https://github.com/aali99/reconftw \
+    && git clone https://github.com/six2dez/reconftw \
     && cd reconftw \
     && ./install.sh
 
