@@ -31,7 +31,7 @@ RUN LATEST_GO=$(wget -qO- https://golang.org/dl/ | grep -oP 'go([0-9\.]+)\.linux
 
 RUN mkdir -p /root/Tools \
     && cd /root/Tools \
-    && git clone https://github.com/six2dez/reconftw \
+    && git clone https://github.com/aali99/reconftw \
     && cd reconftw \
     && ./install.sh
 
