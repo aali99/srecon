@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
 
-RUN apt-get --yes install git wget
+
 RUN apt-get install -y --no-install-recommends hydra nano libpcap-dev screen
 
 RUN mkdir -p /root/Tools \
